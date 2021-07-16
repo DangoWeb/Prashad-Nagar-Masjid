@@ -107,7 +107,7 @@
         }
 
     [id^=lightbox-] .content {
-        max-width: 90%;
+        max-width: 50%;
         position: relative;
         color: #fff;
     }
@@ -119,7 +119,7 @@
 
         [id^=lightbox-] .content:hover > .title {
             opacity: 1;
-            transform: translateY(-3px);
+            transform: translateY(-10px);
         }
 
             [id^=lightbox-] .content:hover > .title::after {
@@ -168,21 +168,21 @@
         width: 2em;
         height: 2em;
         position: absolute;
-        right: 0;
-        top: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        right: -15px;
+        top: -15px;
+        background-color: transparent;
         display: flex;
         align-items: center;
         justify-content: center;
         transform: scale(0, 0);
         opacity: 0;
-        transform-origin: right top;
+        transform-origin: center;
         text-decoration: none;
         color: #fff;
     }
 
         [id^=lightbox-] a.close::after {
-            content: "X";
+            content: url(https://img.icons8.com/color/48/000000/close-window.png);
         }
 
 .tooltip {
@@ -3407,12 +3407,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: relative;
 }
 
-.bricks-wrapper .entry__thumb img {
-    vertical-align: bottom;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    margin: 0;
-}
+    .bricks-wrapper .entry__thumb img {
+        vertical-align: bottom;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        margin: 0;
+        height: 215px;
+    }
 
 .bricks-wrapper .entry__thumb .thumb-link::before {
     z-index: 1;
