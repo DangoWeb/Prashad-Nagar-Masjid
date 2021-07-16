@@ -118,8 +118,7 @@
 :root {
     --font-1: "Inter", sans-serif;
     --font-2: "DM Serif Text", serif;
-    --font-3: "DM Serif Display", serif;
-
+    --font-3: 'Nanum Gothic', sans-serif;
     /* monospace
      */
     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
@@ -1674,7 +1673,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
-    font-family: var(--font-2);
+    font-family: var(--font-3);
 }
 
 h6, .h6 {
