@@ -3681,6 +3681,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: absolute;
     top: calc(50% - 6px);
     left: 4rem;
+    padding-right: 20px;
 }
 
 .s-header__logo a {
