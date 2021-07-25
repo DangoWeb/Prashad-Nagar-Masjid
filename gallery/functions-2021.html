@@ -75,7 +75,7 @@
                         </div>
                         <div class="entry__text">
                             <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-1" id="Image1Title">Photo #1</a></h1>
+                                <h1 class="entry__title"><a onclick="lightbox_open1()" href="#lightbox-1" id="Image1Title">Photo #1</a></h1>
 
                                 <div class="entry__meta">
                                     <span class="byline" ">
@@ -98,7 +98,7 @@
                         </div>
                         <div class="entry__text">
                             <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-2" id="Image2Title">Photo #2</a></h1>
+                                <h1 class="entry__title"><a onclick="lightbox_open2()" href="#lightbox-2" id="Image2Title">Photo #2</a></h1>
 
                                 <div class="entry__meta">
                                     <span class="byline" ">
@@ -161,8 +161,20 @@
     </script>
     <script>
         function lightbox_close2() {
-            var lightBoxVideo2 = document.getElementById("video1");
+            var lightBoxVideo2 = document.getElementById("video2");
             lightBoxVideo2.pause();
+        }
+    </script>
+    <script>
+        function lightbox_open1() {
+            var lightBoxVideo1 = document.getElementById("video1");
+            lightBoxVideo1.play();
+        }
+    </script>
+    <script>
+        function lightbox_open2() {
+            var lightBoxVideo2 = document.getElementById("video2");
+            lightBoxVideo2.play();
         }
     </script>
 

@@ -121,7 +121,7 @@
         }
 
     [id^=lightbox-] .content {
-        max-width: 50%;
+        max-width: 80%;
         position: relative;
         color: #fff;
     }
