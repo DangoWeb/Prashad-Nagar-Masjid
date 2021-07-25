@@ -54,10 +54,11 @@
     <link rel="manifest" href="site.webmanifest">
     <style>
         /* mobile */
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 900px) {
             .donateslider {
                 width: 0rem;
             }
+
             .s-header__logo img {
                 width: 205px;
                 height: 55px;
@@ -67,11 +68,31 @@
             }
         }
 
-        /* desktop */
-        @media screen and (min-width: 767px) {
+        /* small desktop */
+        @media screen and (min-width: 900px) and (max-width: 2000px) {
             .donateslider {
                 width: 40rem;
             }
+
+            .s-header__logo img {
+                width: 210px;
+                height: 60px;
+                margin: 0;
+                vertical-align: bottom;
+                padding-top: 10px;
+            }
+
+            .s-header__navigation {
+                padding-left: 100px;
+            }
+        }
+
+        /* desktop */
+        @media screen and (min-width: 2000px) {
+            .donateslider {
+                width: 40rem;
+            }
+
             .s-header__logo img {
                 width: 210px;
                 height: 60px;
@@ -84,7 +105,6 @@
 </head>
 
 <body id="top">
-
 
     <!-- preloader
     ================================================== -->
@@ -114,20 +134,15 @@
                 <ul class="s-header__nav">
                     <li class="current"><a href="/" title="">Home</a></li>
 
-                    <!--<li class="has-children">
-                        <a href="#0" title="">Categories</a>
+                    <li class="has-children current">
+                        <a href="#0" title="">Photos</a>
                         <ul class="sub-menu">
-                            <li><a href="category.html">Design</a></li>
-                            <li><a href="category.html">Lifestyle</a></li>
-                            <li><a href="category.html">Photography</a></li>
-                            <li><a href="category.html">Vacation</a></li>
-                            <li><a href="category.html">Work</a></li>
-                            <li><a href="category.html">Health</a></li>
-                            <li><a href="category.html">Family</a></li>
-                            <li><a href="category.html">Relationship</a></li>
+                            <li><a href="#lightbox-photos-1">Photos 1</a></li>
+                            <li><a href="#lightbox-eid-ul-adha-2021">Eid Ul Adha 2021</a></li>
+                            <li><a href="#lightbox-functions-2021">Functions 2021</a></li>
                         </ul>
                     </li>
-                    <li class="has-children">
+                    <!--<li class="has-children">
                         <a href="#0" title="">Blog</a>
                         <ul class="sub-menu">
                             <li><a href="single-video.html">Video Post</a></li>
@@ -370,7 +385,7 @@
                     <button class="tablinks" onclick="openCity(event, 'founding-members')">Founding Members</button>
                     <button class="tablinks" onclick="openCity(event, 'current-committee')">Current Committee</button>
                     <!--<button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>-->
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>-->
                     <button class="tablinks" onclick="openCity(event, '')">Hide All</button>
                 </div>
             </div>
@@ -684,687 +699,759 @@
                 </div>
             </div>
         </div>
-        <div class="s-bricks" id="photo-archive">
+        <!--<div class="s-bricks" id="photo-archive">
+        <div class="masonry">
+            <div class="bricks-wrapper h-group">
+                <div class="grid-sizer"></div>
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <article class="brick entry" data-aos="fade-up">
+
+                    <div class="entry__thumb">
+                        <a href="#lightbox-1" class="thumb-link" id="Image1Image">
+                            <img src="sideview.jpg"
+                                 srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="#lightbox-1" id="Image1Title">Photo #1</a></h1>
+
+                            <div class="entry__meta">
+                                <span class="byline" ">
+                                    Date:
+                                    <span class='author' style="color: #ababab" id="Image1Date">
+                                        01/23/4567
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="brick entry" data-aos="fade-up">
+
+                    <div class="entry__thumb">
+                        <a href="#lightbox-2" class="thumb-link" id="Image2Image">
+                            <img src="sideview.jpg"
+                                 srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="#lightbox-2" id="Image2Title">Photo #2</a></h1>
+
+                            <div class="entry__meta">
+                                <span class="byline" ">
+                                    Date:
+                                    <span class='author' style="color: #ababab" id="Image2Date">
+                                        01/23/4567
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="brick entry" data-aos="fade-up">
+
+                    <div class="entry__thumb">
+                        <a href="#lightbox-3" class="thumb-link" id="Image3Image">
+                            <img src="sideview.jpg"
+                                 srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="#lightbox-3" id="Image3Title">Photo #3</a></h1>
+
+                            <div class="entry__meta">
+                                <span class="byline" ">
+                                    Date:
+                                    <span class='author' style="color: #ababab" id="Image3Date">
+                                        01/23/4567
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="brick entry" data-aos="fade-up">
+
+                    <div class="entry__thumb">
+                        <a href="#lightbox-4" class="thumb-link" id="Image4Image">
+                            <img src="sideview.jpg"
+                                 srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="#lightbox-4" id="Image4Title">Photo #4</a></h1>
+
+                            <div class="entry__meta">
+                                <span class="byline" ">
+                                    Date:
+                                    <span class='author' style="color: #ababab" id="Image4Date">
+                                        01/23/4567
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="brick entry" data-aos="fade-up">
+
+                    <div class="entry__thumb">
+                        <a href="#lightbox-5" class="thumb-link" id="Image5Image">
+                            <img src="sideview.jpg"
+                                 srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="#lightbox-5" id="Image5Title">Photo #5</a></h1>
+
+                            <div class="entry__meta">
+                                <span class="byline" ">
+                                    Date:
+                                    <span class='author' style="color: #ababab" id="Image5Date">
+                                        01/23/4567
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="brick entry" data-aos="fade-up">
+
+                    <div class="entry__thumb">
+                        <a href="#lightbox-6" class="thumb-link" id="Image6Image">
+                            <img src="sideview.jpg"
+                                 srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="#lightbox-6" id="Image6Title">Photo #6</a></h1>
+
+                            <div class="entry__meta">
+                                <span class="byline" ">
+                                    Date:
+                                    <span class='author' style="color: #ababab" id="Image6Date">
+                                        01/23/4567
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="brick entry" data-aos="fade-up">
+
+                    <div class="entry__thumb">
+                        <a href="#lightbox-7" class="thumb-link" id="Image7Image">
+                            <img src="sideview.jpg"
+                                 srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="#lightbox-7" id="Image7Title">Photo #7</a></h1>
+
+                            <div class="entry__meta">
+                                <span class="byline" ">
+                                    Date:
+                                    <span class='author' style="color: #ababab" id="Image7Date">
+                                        01/23/4567
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div id="lightboxes">
+            <div class="lightbox" id="lightbox-1">
+                <div class="content" id="Image1Light">
+                    <img src="https://picsum.photos/1920/1080/?image=512" />
+                    <div class="title">No. <b>512</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-2">
+                <div class="content" id="Image2Light">
+                    <img src="https://picsum.photos/1920/1080/?image=513" />
+                    <div class="title">No. <b>513</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-3">
+                <div class="content" id="Image3Light">
+                    <img src="https://picsum.photos/1920/1080/?image=514" />
+                    <div class="title">No. <b>514</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-4">
+                <div class="content" id="Image4Light">
+                    <img src="https://picsum.photos/1920/1080/?image=515" />
+                    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-5">
+                <div class="content" id="Image5Light">
+                    <img src="https://picsum.photos/1920/1080/?image=515" />
+                    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-6">
+                <div class="content" id="Image6Light">
+                    <img src="https://picsum.photos/1920/1080/?image=515" />
+                    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-7">
+                <div class="content" id="Image7Light">
+                    <img src="https://picsum.photos/1920/1080/?image=515" />
+                    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+        </div>
+        <div id="lightboxes">
+            <div class="lightbox" id="lightbox-photos-1">
+                <div class="content" style="max-width: 100%;padding:0px 0px 0px 0px;width:100%;height:100%">
+                    <iframe style="height:100%;width:100%;border:none;border-radius:0px" " src="gallery/one.html" width="300" style="border:0;" allowfullscreen="" loading="lazy" frameBorder="0"></iframe>
+                    <a class="close" href="#" style="right: 40px; top: 30px; "></a>
+                </div>
+            </div>
+        </div>
+
+    </div>-->
+        <div id="lightboxes">
+            <div class="lightbox" id="lightbox-1">
+                <div class="content" id="Image1Light">
+                    <img src="https://picsum.photos/1920/1080/?image=512" />
+                    <div class="title">No. <b>512</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-2">
+                <div class="content" id="Image2Light">
+                    <img src="https://picsum.photos/1920/1080/?image=513" />
+                    <div class="title">No. <b>513</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-3">
+                <div class="content" id="Image3Light">
+                    <img src="https://picsum.photos/1920/1080/?image=514" />
+                    <div class="title">No. <b>514</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-4">
+                <div class="content" id="Image4Light">
+                    <img src="https://picsum.photos/1920/1080/?image=515" />
+                    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-5">
+                <div class="content" id="Image5Light">
+                    <img src="https://picsum.photos/1920/1080/?image=515" />
+                    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-6">
+                <div class="content" id="Image6Light">
+                    <img src="https://picsum.photos/1920/1080/?image=515" />
+                    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-7">
+                <div class="content" id="Image7Light">
+                    <img src="https://picsum.photos/1920/1080/?image=515" />
+                    <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+                </div>
+            </div>
+        </div>
+        <div id="lightboxes">
+            <div class="lightbox" id="lightbox-photos-1">
+                <div class="content" style="max-width: 100%;padding:0px 0px 0px 0px;width:100%;height:100%">
+                    <iframe style="height:100%;width:100%;border:none;border-radius:0px" " src="gallery/one.html" width="300" style="border:0;" allowfullscreen="" loading="lazy" frameBorder="0"></iframe>
+                    <a class="close" href="#" style="right: 40px; top: 30px; "></a>
+                </div>
+            </div>
+        </div>
+        <div id="lightboxes">
+            <div class="lightbox" id="lightbox-eid-ul-adha-2021">
+                <div class="content" style="max-width: 100%;padding:0px 0px 0px 0px;width:100%;height:100%">
+                    <iframe style="height:100%;width:100%;border:none;border-radius:0px" " src="gallery/eid-ul-adha-2021.html" width="300" style="border:0;" allowfullscreen="" loading="lazy" frameBorder="0"></iframe>
+                    <a class="close" href="#" style="right: 40px; top: 30px; "></a>
+                </div>
+            </div>
+            <div class="lightbox" id="lightbox-functions-2021">
+                <div class="content" style="max-width: 100%;padding:0px 0px 0px 0px;width:100%;height:100%">
+                    <iframe style="height:100%;width:100%;border:none;border-radius:0px" " src="gallery/functions-2021.html" width="300" style="border:0;" allowfullscreen="" loading="lazy" frameBorder="0"></iframe>
+                    <a class="close" href="#" style="right: 40px; top: 30px; "></a>
+                </div>
+            </div>
+        </div>
+        <!--<div class="s-bricks">
+
             <div class="masonry">
                 <div class="bricks-wrapper h-group">
+
                     <div class="grid-sizer"></div>
+
                     <div class="lines">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
+
                     <article class="brick entry" data-aos="fade-up">
 
-                        <div class="entry__thumb">
-                            <a href="#lightbox-1" class="thumb-link" id="Image1Image">
-                                <img src="sideview.jpg"
-                                     srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-1" id="Image1Title">Photo #1</a></h1>
+            <div class="entry__thumb">
+                <a href="single-standard.html" class="thumb-link">
+                    <img src="images/thumbs/masonry/macbook-600.jpg"
+                         srcset="images/thumbs/masonry/macbook-600.jpg 1x, images/thumbs/masonry/macbook-1200.jpg 2x" alt="">
+                </a>
+            </div>
 
-                                <div class="entry__meta">
-                                    <span class="byline" ">
-                                        Date:
-                                        <span class='author' style="color: #ababab" id="Image1Date">
-                                            01/23/4567
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="brick entry" data-aos="fade-up">
+            <div class="entry__text">
+                <div class="entry__header">
+                    <h1 class="entry__title"><a href="https://www.dreamhost.com/r.cgi?287326">Need Web Hosting for Your Websites?</a></h1>
 
-                        <div class="entry__thumb">
-                            <a href="#lightbox-2" class="thumb-link" id="Image2Image">
-                                <img src="sideview.jpg"
-                                     srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-2" id="Image2Title">Photo #2</a></h1>
-
-                                <div class="entry__meta">
-                                    <span class="byline" ">
-                                        Date:
-                                        <span class='author' style="color: #ababab" id="Image2Date">
-                                            01/23/4567
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="brick entry" data-aos="fade-up">
-
-                        <div class="entry__thumb">
-                            <a href="#lightbox-3" class="thumb-link" id="Image3Image">
-                                <img src="sideview.jpg"
-                                     srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-3" id="Image3Title">Photo #3</a></h1>
-
-                                <div class="entry__meta">
-                                    <span class="byline" ">
-                                        Date:
-                                        <span class='author' style="color: #ababab" id="Image3Date">
-                                            01/23/4567
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="brick entry" data-aos="fade-up">
-
-                        <div class="entry__thumb">
-                            <a href="#lightbox-4" class="thumb-link" id="Image4Image">
-                                <img src="sideview.jpg"
-                                     srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-4" id="Image4Title">Photo #4</a></h1>
-
-                                <div class="entry__meta">
-                                    <span class="byline" ">
-                                        Date:
-                                        <span class='author' style="color: #ababab" id="Image4Date">
-                                            01/23/4567
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="brick entry" data-aos="fade-up">
-
-                        <div class="entry__thumb">
-                            <a href="#lightbox-5" class="thumb-link" id="Image5Image">
-                                <img src="sideview.jpg"
-                                     srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-5" id="Image5Title">Photo #5</a></h1>
-
-                                <div class="entry__meta">
-                                    <span class="byline" ">
-                                        Date:
-                                        <span class='author' style="color: #ababab" id="Image5Date">
-                                            01/23/4567
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="brick entry" data-aos="fade-up">
-
-                        <div class="entry__thumb">
-                            <a href="#lightbox-6" class="thumb-link" id="Image6Image">
-                                <img src="sideview.jpg"
-                                     srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-6" id="Image6Title">Photo #6</a></h1>
-
-                                <div class="entry__meta">
-                                    <span class="byline" ">
-                                        Date:
-                                        <span class='author' style="color: #ababab" id="Image6Date">
-                                            01/23/4567
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="brick entry" data-aos="fade-up">
-
-                        <div class="entry__thumb">
-                            <a href="#lightbox-7" class="thumb-link" id="Image7Image">
-                                <img src="sideview.jpg"
-                                     srcset="sideview.jpg 1x, sideview.jpg 2x" alt="">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="#lightbox-7" id="Image7Title">Photo #7</a></h1>
-
-                                <div class="entry__meta">
-                                    <span class="byline" ">
-                                        Date:
-                                        <span class='author' style="color: #ababab" id="Image7Date">
-                                            01/23/4567
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div id="lightboxes">
-                        <div class="lightbox" id="lightbox-1">
-                            <div class="content" id="Image1Light">
-                                <img src="https://picsum.photos/1920/1080/?image=512" />
-                                <div class="title">No. <b>512</b> from Picsum</div><a class="close" href="#gallery"></a>
-                            </div>
-                        </div>
-                        <div class="lightbox" id="lightbox-2">
-                            <div class="content" id="Image2Light">
-                                <img src="https://picsum.photos/1920/1080/?image=513" />
-                                <div class="title">No. <b>513</b> from Picsum</div><a class="close" href="#gallery"></a>
-                            </div>
-                        </div>
-                        <div class="lightbox" id="lightbox-3">
-                            <div class="content" id="Image3Light">
-                                <img src="https://picsum.photos/1920/1080/?image=514" />
-                                <div class="title">No. <b>514</b> from Picsum</div><a class="close" href="#gallery"></a>
-                            </div>
-                        </div>
-                        <div class="lightbox" id="lightbox-4">
-                            <div class="content" id="Image4Light">
-                                <img src="https://picsum.photos/1920/1080/?image=515" />
-                                <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
-                            </div>
-                        </div>
-                        <div class="lightbox" id="lightbox-5">
-                            <div class="content" id="Image5Light">
-                                <img src="https://picsum.photos/1920/1080/?image=515" />
-                                <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
-                            </div>
-                        </div>
-                        <div class="lightbox" id="lightbox-6">
-                            <div class="content" id="Image6Light">
-                                <img src="https://picsum.photos/1920/1080/?image=515" />
-                                <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
-                            </div>
-                        </div>
-                        <div class="lightbox" id="lightbox-7">
-                            <div class="content" id="Image7Light">
-                                <img src="https://picsum.photos/1920/1080/?image=515" />
-                                <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
-                            </div>
-                        </div>
-
+                    <div class="entry__meta">
+                        <span class="byline" ">
+                            By:
+                            <span class='author'>
+                                <a href="https://www.dreamhost.com/r.cgi?287326">StyleShout</a>
+                            </span>
+                        </span>
+                        <span class="cat-links">
+                            <a href="https://www.dreamhost.com/r.cgi?287326">Site Partner</a>
+                        </span>
                     </div>
                 </div>
+                <div class="entry__excerpt">
+                    <p>
+                        Need hosting? We would highly recommend DreamHost.
+                        Enjoy 100% in-house support, guaranteed performance and uptime, 1-click installs, and a super-intuitive control panel to make managing your websites and projects easy.
+                    </p>
+                </div>
+                <a class="entry__more-link" href="https://www.dreamhost.com/r.cgi?287326">Learn More</a>
+            </div>
+
+        </article>
+
+        <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/woodcraft-600.jpg"
+                     srcset="images/thumbs/masonry/woodcraft-600.jpg 1x, images/thumbs/masonry/woodcraft-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">Just a Normal Simple Blog Post.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Naruto Uzumaki</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Design</a>
+                        <a href="#">Photography</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/tulips-600.jpg"
+                     srcset="images/thumbs/masonry/tulips-600.jpg 1x, images/thumbs/masonry/tulips-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">10 Interesting Facts About Caffeine.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Shikamaru Nara</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Health</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/grayscale-600.jpg"
+                     srcset="images/thumbs/masonry/grayscale-600.jpg 1x, images/thumbs/masonry/grayscale-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">5  Grayscale Coloring Techniques.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Susuke Uchiha</a>
+                        </span>
+                    </span>
+                    <span class="cat-links">
+                        <a href="#">Design</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/walk-600.jpg"
+                     srcset="images/thumbs/masonry/walk-600.jpg 1x, images/thumbs/masonry/walk-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">Using Repetition and Patterns in Photography.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Naruto Uzumaki</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Work</a>
+                        <a href="#">Lifestyle</a>
+                    </span>
+                </div>
+
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/jump-600.jpg"
+                     srcset="images/thumbs/masonry/jump-600.jpg 1x, images/thumbs/masonry/jump-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">Create Meaningful Family Moments.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Naruto Uzumaki</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Family</a>
+                        <a href="#">Relationship</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/real-600.jpg"
+                     srcset="images/thumbs/masonry/real-600.jpg 1x, images/thumbs/masonry/real-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">How We Live Is What Makes Us Real.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Naruto Uzumaki</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Travel</a>
+                        <a href="#">Vacation</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/lamp-600.jpg"
+                     srcset="images/thumbs/masonry/lamp-600.jpg 1x, images/thumbs/masonry/lamp-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">Symmetry In Modern Design.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Kakakshi Hatake</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Design</a>
+                        <a href="#">Photography</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/clock-600.jpg"
+                     srcset="images/thumbs/masonry/clock-600.jpg 1x, images/thumbs/masonry/clock-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">10 Tips for Managing Time Effectively.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">John Doe</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Lifestyle</a>
+                        <a href="#">Work</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/beetle-600.jpg"
+                     srcset="images/thumbs/masonry/beetle-600.jpg 1x, images/thumbs/masonry/beetle-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">Throwback To The Good Old Days.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Sakura Haruno</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Lifestyle</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/phone-and-keyboard-600.jpg"
+                     srcset="images/thumbs/masonry/phone-and-keyboard-600.jpg 1x, images/thumbs/masonry/phone-and-keyboard-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">3 Reasons to Keep Your Workplace Tidy.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Sakura Haruno</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Work</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+
+    <article class="brick entry" data-aos="fade-up">
+
+        <div class="entry__thumb">
+            <a href="single-standard.html" class="thumb-link">
+                <img src="images/thumbs/masonry/seashore-600.jpg"
+                     srcset="images/thumbs/masonry/seashore-600.jpg 1x, images/thumbs/masonry/seashore-1200.jpg 2x" alt="">
+            </a>
+        </div>
+
+        <div class="entry__text">
+            <div class="entry__header">
+                <h1 class="entry__title"><a href="single-standard.html">What The Beach Does to Your Brain.</a></h1>
+
+                <div class="entry__meta">
+                    <span class="byline"">By:
+                        <span class='author'>
+                            <a href="#0">Naruto Uzumaki</a>
+                    </span>
+                </span>
+                    <span class="cat-links">
+                        <a href="#">Health</a>
+                        <a href="#">Vacation</a>
+                    </span>
+                </div>
+            </div>
+            <div class="entry__excerpt">
+                <p>
+                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                </p>
+            </div>
+            <a class="entry__more-link" href="#0">Read More</a>
+        </div>
+
+    </article>
+        </div>
+
+        </div>
+
+        <div class="row">
+            <div class="column large-12">
+                <nav class="pgn">
+                    <ul>
+                        <li>
+                            <span class="pgn__prev" href="#0">
+                                Prev
+                            </span>
+                        </li>
+                        <li><a class="pgn__num" href="#0">1</a></li>
+                        <li><span class="pgn__num current">2</span></li>
+                        <li><a class="pgn__num" href="#0">3</a></li>
+                        <li><a class="pgn__num" href="#0">4</a></li>
+                        <li><a class="pgn__num" href="#0">5</a></li>
+                        <li><span class="pgn__num dots">…</span></li>
+                        <li><a class="pgn__num" href="#0">8</a></li>
+                        <li>
+                            <span class="pgn__next" href="#0">
+                                Next
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
 
-        <!--<div class="s-bricks">
-
-                <div class="masonry">
-                    <div class="bricks-wrapper h-group">
-
-                        <div class="grid-sizer"></div>
-
-                        <div class="lines">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <article class="brick entry" data-aos="fade-up">
-
-                <div class="entry__thumb">
-                    <a href="single-standard.html" class="thumb-link">
-                        <img src="images/thumbs/masonry/macbook-600.jpg"
-                             srcset="images/thumbs/masonry/macbook-600.jpg 1x, images/thumbs/masonry/macbook-1200.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="entry__text">
-                    <div class="entry__header">
-                        <h1 class="entry__title"><a href="https://www.dreamhost.com/r.cgi?287326">Need Web Hosting for Your Websites?</a></h1>
-
-                        <div class="entry__meta">
-                            <span class="byline" ">
-                                By:
-                                <span class='author'>
-                                    <a href="https://www.dreamhost.com/r.cgi?287326">StyleShout</a>
-                                </span>
-                            </span>
-                            <span class="cat-links">
-                                <a href="https://www.dreamhost.com/r.cgi?287326">Site Partner</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="entry__excerpt">
-                        <p>
-                            Need hosting? We would highly recommend DreamHost.
-                            Enjoy 100% in-house support, guaranteed performance and uptime, 1-click installs, and a super-intuitive control panel to make managing your websites and projects easy.
-                        </p>
-                    </div>
-                    <a class="entry__more-link" href="https://www.dreamhost.com/r.cgi?287326">Learn More</a>
-                </div>
-
-            </article>
-
-            <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/woodcraft-600.jpg"
-                         srcset="images/thumbs/masonry/woodcraft-600.jpg 1x, images/thumbs/masonry/woodcraft-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">Just a Normal Simple Blog Post.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Naruto Uzumaki</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Design</a>
-                            <a href="#">Photography</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/tulips-600.jpg"
-                         srcset="images/thumbs/masonry/tulips-600.jpg 1x, images/thumbs/masonry/tulips-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">10 Interesting Facts About Caffeine.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Shikamaru Nara</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Health</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/grayscale-600.jpg"
-                         srcset="images/thumbs/masonry/grayscale-600.jpg 1x, images/thumbs/masonry/grayscale-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">5  Grayscale Coloring Techniques.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Susuke Uchiha</a>
-                            </span>
-                        </span>
-                        <span class="cat-links">
-                            <a href="#">Design</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/walk-600.jpg"
-                         srcset="images/thumbs/masonry/walk-600.jpg 1x, images/thumbs/masonry/walk-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">Using Repetition and Patterns in Photography.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Naruto Uzumaki</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Work</a>
-                            <a href="#">Lifestyle</a>
-                        </span>
-                    </div>
-
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/jump-600.jpg"
-                         srcset="images/thumbs/masonry/jump-600.jpg 1x, images/thumbs/masonry/jump-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">Create Meaningful Family Moments.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Naruto Uzumaki</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Family</a>
-                            <a href="#">Relationship</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/real-600.jpg"
-                         srcset="images/thumbs/masonry/real-600.jpg 1x, images/thumbs/masonry/real-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">How We Live Is What Makes Us Real.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Naruto Uzumaki</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Travel</a>
-                            <a href="#">Vacation</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/lamp-600.jpg"
-                         srcset="images/thumbs/masonry/lamp-600.jpg 1x, images/thumbs/masonry/lamp-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">Symmetry In Modern Design.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Kakakshi Hatake</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Design</a>
-                            <a href="#">Photography</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/clock-600.jpg"
-                         srcset="images/thumbs/masonry/clock-600.jpg 1x, images/thumbs/masonry/clock-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">10 Tips for Managing Time Effectively.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">John Doe</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Lifestyle</a>
-                            <a href="#">Work</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/beetle-600.jpg"
-                         srcset="images/thumbs/masonry/beetle-600.jpg 1x, images/thumbs/masonry/beetle-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">Throwback To The Good Old Days.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Sakura Haruno</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Lifestyle</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/phone-and-keyboard-600.jpg"
-                         srcset="images/thumbs/masonry/phone-and-keyboard-600.jpg 1x, images/thumbs/masonry/phone-and-keyboard-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">3 Reasons to Keep Your Workplace Tidy.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Sakura Haruno</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Work</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-
-        <article class="brick entry" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="single-standard.html" class="thumb-link">
-                    <img src="images/thumbs/masonry/seashore-600.jpg"
-                         srcset="images/thumbs/masonry/seashore-600.jpg 1x, images/thumbs/masonry/seashore-1200.jpg 2x" alt="">
-                </a>
-            </div>
-
-            <div class="entry__text">
-                <div class="entry__header">
-                    <h1 class="entry__title"><a href="single-standard.html">What The Beach Does to Your Brain.</a></h1>
-
-                    <div class="entry__meta">
-                        <span class="byline"">By:
-                            <span class='author'>
-                                <a href="#0">Naruto Uzumaki</a>
-                        </span>
-                    </span>
-                        <span class="cat-links">
-                            <a href="#">Health</a>
-                            <a href="#">Vacation</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                    </p>
-                </div>
-                <a class="entry__more-link" href="#0">Read More</a>
-            </div>
-
-        </article>
-            </div>
-
-            </div>
-
-            <div class="row">
-                <div class="column large-12">
-                    <nav class="pgn">
-                        <ul>
-                            <li>
-                                <span class="pgn__prev" href="#0">
-                                    Prev
-                                </span>
-                            </li>
-                            <li><a class="pgn__num" href="#0">1</a></li>
-                            <li><span class="pgn__num current">2</span></li>
-                            <li><a class="pgn__num" href="#0">3</a></li>
-                            <li><a class="pgn__num" href="#0">4</a></li>
-                            <li><a class="pgn__num" href="#0">5</a></li>
-                            <li><span class="pgn__num dots">…</span></li>
-                            <li><a class="pgn__num" href="#0">8</a></li>
-                            <li>
-                                <span class="pgn__next" href="#0">
-                                    Next
-                                </span>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
-            </div>-->
+        </div>-->
 
     </section>
 
@@ -1473,7 +1560,6 @@
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
     <!-- Image Gallery Images, Titles, Dates (Variables) -->
     <script>
         var Image1Image = '<img src="images/gallery/1.jpg" srcset = "images/gallery/1.jpg 1x, images/gallery/1.jpg 2x" alt="" >';

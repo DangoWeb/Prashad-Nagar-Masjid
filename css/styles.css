@@ -59,7 +59,17 @@
     transition: all ease 1s;
 }
 
+#gallery > div > video {
+    width: 100%;
+    min-height: 100%;
+    transition: all ease 1s;
+}
+
 #gallery > div:hover img {
+    filter: blur(4px);
+}
+
+#gallery > div:hover video {
     filter: blur(4px);
 }
 
@@ -103,6 +113,10 @@
     }
 
         [id^=lightbox-]:target img {
+            filter: blur(0);
+        }
+
+        [id^=lightbox-]:target video {
             filter: blur(0);
         }
 
@@ -163,6 +177,15 @@
         padding: 0;
         filter: blur(50px);
     }
+
+    [id^=lightbox-] video {
+        max-height: 90vh;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        filter: blur(50px);
+    }
+
 
     [id^=lightbox-] a.close {
         width: 2em;
@@ -3645,10 +3668,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     --logo-width: 96px;
     --logo-height: 24px;
     z-index: 100;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
     width: 100%;
     height: var(--header-height);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #222222;
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
@@ -3667,7 +3690,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .sticky {
     position: fixed;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #222222;
 }
 
 /* -------------------------------------------------------------------
@@ -4091,7 +4114,7 @@ body.search-is-visible {
     .s-header__nav-wrap {
         --color-border: var(--color-gray-1);
         z-index: 300;
-        background-color: black;
+        background-color: #222222;
         opacity: 0;
         visibility: hidden;
         position: fixed;
